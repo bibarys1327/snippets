@@ -1,0 +1,34 @@
+{
+	"exportDefault": {
+    "key": "exportDefault",
+    "prefix": "exp",
+    "body": ["export default ${1:first}"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"exportDestructing": {
+    "key": "exportDestructing",
+    "prefix": "exd",
+    "body": ["export { ${2:second} } from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"exportAs": {
+    "key": "exportAs",
+    "prefix": "exa",
+    "body": ["export { ${2:second} as ${3:third} } from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"exportNamedFunction": {
+    "key": "exportNamedFunction",
+    "prefix": "enf",
+    "body": ["export const ${1:first} = (${2:second}) => {${3:third}}"],
+    "key": "Export named function",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"exportDefaultFunction": {
+    "key": "exportDefaultFunction",
+    "prefix": "edf",
+    "body": ["export default (${1:first}) => {${2:second}}"],
+    "key": "Export default function",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+}

@@ -1,0 +1,111 @@
+{
+	"Next 14 | Page component": {
+		"prefix": "pc",
+		"scope": "typescriptreact, javascriptreact",
+		"body": [
+		"// NEXT JS setup",
+		"npm install eslint-plugin-tailwindcss ",
+		"npm install eslint-config-prettier",
+		"npm install prettier",
+		"Install ESLint and Prettier from the Extensions Marketplace,  Prettier Eslint Package too",
+		"{",
+ 		" 'extends': ['next/core-web-vitals', 'standard', 'plugin:tailwindcss/recommended', 'prettier']",
+		"},",
+		],
+		"description": "Next 14 | Page component"
+	},
+	"Eslint and Prettier": {
+		"prefix": "espn",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Route component",
+		"body": [
+			"//vscode setup",
+			"//settings.json",
+		"{",
+				"\"editor.defaultFormatter\": \"esbenp.prettier-vscode\",",
+				"\"editor.formatOnSave\": true,",
+				"\"editor.codeActionsOnSave\": {",
+				"\"source.fixAll.eslint\": true,",
+				"\"source.addMissingImports\": true",
+			"},",
+				"\"prettier.tabWidth\": 2,",
+				"\"prettier.useTabs\": false,",
+				"\"prettier.semi\": true,",
+				"\"prettier.singleQuote\": false,",
+				"\"prettier.jsxSingleQuote\": false,",
+				"\"prettier.trailingComma\": \"es5\",",
+				"\"prettier.arrowParens\": \"always\",",
+				"\"[typescriptreact]\": {",
+				"\"editor.defaultFormatter\": \"esbenp.prettier-vscode\"",
+				"}",
+			"}"
+		]
+	},
+	"ngapit": {
+    "prefix": "trh",
+    "body": [
+			"//React js setup",
+			"//.eslintrc.json",
+			"//npm install eslint-config-standard eslint-plugin-tailwindcss eslint-config-prettier",
+    	 "{",
+				"\"extends\": [",
+					"\"standard\",",
+					"\"plugin:react/recommended\",",
+					"\"plugin:tailwindcss/recommended\",",
+					"\"prettier\"",
+				"],",
+				"\"rules\": {",
+					"\"max-len\": [2, 250],",
+					"\"no-multiple-empty-lines\": [",
+						"\"error\",",
+						"{",
+							"\"max\": 1,",
+							"\"maxEOF\": 1",
+						"}",
+					"],",
+					"\"object-curly-newline\": 0",
+					"}",
+		"}"  
+    ],
+    "description": "Typescript: Next.js API Route"
+  },
+	"Next 14 | Params": {
+		"prefix": "pi",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Params ",
+		"body": [
+			"{ params: { ${1:id} } }: { params: { ${1:id}: ${2:string} } }"
+		]
+	},
+	"Next 14 | Metadata": {
+		"prefix": "md",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Metadata",
+		"body": [
+			"import type { Metadata } from 'next'",
+			"",
+			"export const metadata: Metadata = {",
+			"\ttitle: '${1}',",
+			"\tdescription: '${2}'",
+			"}"
+		]
+	},
+	"Next Image component defination": {
+    "prefix": "nui",
+		"scope": "typescriptreact, javascriptreact",
+    "body": ["<Image src='${1:path}' width={${2:20px}} height={${3:20px}} alt='' />"],
+    "description": "nextjs usage of Image Component"
+  },
+	"Next use link": {
+    "prefix": "nul",
+		"scope": "typescriptreact, javascriptreact",
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
+    "description": "Nextjs use link element"
+  },
+	"clsx or cn": {
+		"scope": "javascript, javascriptreact, typescriptreact, typescript",
+		"prefix": "cn",
+		"body": ["className={cn(className, 'flex flex-1')}"],
+		"description": "create a cn "
+	},
+}

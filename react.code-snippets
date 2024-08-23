@@ -1,0 +1,55 @@
+{
+	"rfc": {
+    "prefix": "rfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = () => {",
+			"\t${2:}",
+      "\treturn (",
+			"\t\t<div>",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}</h1>",
+			"\t\t</div>",
+			"\t);",
+		"}",
+      "export default ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}};"
+    ],
+    "description": "JavaScript: React functional component"
+  },
+	"tfc": {
+    "prefix": "tfc",
+    "body": [
+      "interface Props {",
+				"\t${2:}: string",
+			"}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = ({${2:}}: Props) => {",
+			"\t${3:}",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}</h1>",
+			"\t\t</div>",
+			"\t);",
+		"}",
+      "export default ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}};"
+    ],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "Typescript: React functional component"
+  },
+	"TypeScript React Component with Props + CN": {
+		"prefix": "trscpn",
+		"body": [
+			"import React from 'react';",
+			"import { cn } from '@/lib/utils';",
+			"",
+			"interface Props {",
+			"  className?: string;",
+			"}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}: React.FC<Props> = ({ className }}) => {",
+			"  return (",
+			"    <div className={cn(className)}>${3}</div>",
+			"  );",
+			"};"
+		],
+		"description": "TypeScript React Component with Props + CN"
+	},
+}

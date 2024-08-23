@@ -1,0 +1,47 @@
+{	
+	"inter": {
+		"scope": "typescriptreact, typescript",
+		"prefix": "inter",
+		"body": ["interface ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}Props { ", "\t${2}", "}"],
+		"description": "create a new interface"
+	},
+	"service": {
+		"scope": "javascript, javascriptreact, typescriptreact, typescript",
+		"prefix": "ec",
+		"body": ["export const ${TM_FILENAME_BASE} = { ", 	"\t${1}", "}"],
+		"description": "create a new service"
+	},
+	"Inline If": {
+    "prefix": "~if",
+    "body": [
+      "{${1:condition} &&",
+      "  $2",
+      "}"
+    ],
+  },
+	"Inline If-Else": {
+    "prefix": "~ife",
+    "body": [
+      "{${1:condition}",
+      "  ? $2",
+      "  : $3",
+      "}"
+    ],
+  },
+  "Rendering Multiple": {
+    "prefix": "~map",
+    "body": [
+      "{${1:list}.map((item) =>",
+      "  $2",
+      ")}"
+    ],
+  },
+  "Rendering Multiple and Key": {
+    "prefix": "~mapk",
+    "body": [
+      "{${1:list}.map((item, index) =>",
+      "  $2",
+      ")}"
+    ],
+  }
+}

@@ -1,0 +1,78 @@
+{
+	"import": {
+    "key": "import",
+    "prefix": "impdwp",
+    "body": [
+			"// get info from db with prisma client",
+"export const ${1:getAll} = async () => {",
+  "const { data } = await ${2:axiosInstance}.get < ${3:IStory[]} > (${4:'/stories'});",
+	"",
+"  return data;",
+"};"
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importEverything": {
+    "key": "importEverything",
+    "prefix": "imdwpp",
+    "body": [
+			"// too but with promise",
+"export const ${1:getAll} = async (): Promise < ${2: Ingredient[]} > => {",
+  "return (await ${3:axiosInstance}.get < ${4: Ingredient[] } > (ApiRoutes.INGREDIENTS)).data;",
+"};"
+
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importAs": {
+    "key": "importAs",
+    "prefix": "ima",
+    "body": [
+"// we can call in tsx files to call data from db",
+"const [stories, setStories] = React.useState<IStory[]>([]);",
+"",
+"React.useEffect(() => {",
+    "async function fetchStories() {",
+     " const data = await Api.stories.getAll();",
+     " setStories(data);",
+  " }",
+"",
+    "fetchStories();",
+"  }, []);",
+"",
+"",
+"// services / constants",
+"export enum ApiRoutes {",
+  "SEARCH_PRODUCTS = 'products/search',",
+ " INGREDIENTS = 'ingredients',",
+"}"
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importDestructing": {
+    "key": "importDestructing",
+    "prefix": "imd",
+    "body": ["import { ${2:zod} } from '${1:zod}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"'use client' directive": {
+		"prefix": "uc",
+		"body": [
+			"'use client';",
+		],
+		"description": "'use client' directive",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+  "api-client.ts": {
+    "key": "importApiClient",
+    "prefix": "imapicli",
+    "body": [
+     " import * as products from './products'",
+"",
+"export const Api = {",
+  "products",
+"}"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+}

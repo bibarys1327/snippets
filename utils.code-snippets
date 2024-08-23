@@ -1,0 +1,77 @@
+{
+	"import": {
+    "key": "import",
+    "prefix": "impdwp",
+    "body": [
+			"export const axiosInstance = axios.create({",
+				"baseURL: process.env.NEXT_PUBLIC_API_URL,",
+			"})"
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importEverything": {
+    "key": "importEverything",
+    "prefix": "imdwpp",
+    "body": [
+			"import { type ClassValue, clsx } from 'clsx'",
+"import { twMerge } from 'tailwind-merge'",
+"",
+"export function cn(...inpus: ClassValue[]){",
+  "return twMerge(clsx(inputs))",
+"}"
+
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importAs": {
+    "key": "importAs",
+    "prefix": "ima",
+    "body": [
+"// we can call in tsx files to call data from db",
+"const [stories, setStories] = React.useState<IStory[]>([]);",
+"",
+"React.useEffect(() => {",
+    "async function fetchStories() {",
+     " const data = await Api.stories.getAll();",
+     " setStories(data);",
+  " }",
+"",
+    "fetchStories();",
+"  }, []);",
+"",
+"",
+"// services / constants",
+"export enum ApiRoutes {",
+  "SEARCH_PRODUCTS = 'products/search',",
+ " INGREDIENTS = 'ingredients',",
+"}"
+		],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importDestructing": {
+    "key": "importDestructing",
+    "prefix": "routejs",
+    "body": ["export async function ${2|GET,HEAD,POST,PUT,DELETE,PATCH|}(request: Request) {}"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"'use client' directive": {
+		"prefix": "uc",
+		"body": [
+			"'use client';",
+		],
+		"description": "'use client' directive",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+  "api-client.ts": {
+    "key": "importApiClient",
+    "prefix": "imapicli",
+    "body": [
+     " import * as products from './products'",
+"",
+"export const Api = {",
+  "products",
+"}"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+}

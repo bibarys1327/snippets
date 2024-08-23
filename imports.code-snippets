@@ -1,0 +1,46 @@
+{
+	"import": {
+    "key": "import",
+    "prefix": "imp",
+    "body": ["import ${2:axios} from '${1:axios}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importEverything": {
+    "key": "importEverything",
+    "prefix": "ime",
+    "body": ["import * as ${2:second} from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importAs": {
+    "key": "importAs",
+    "prefix": "ima",
+    "body": ["import { ${2:second} as ${3:third} } from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"importDestructing": {
+    "key": "importDestructing",
+    "prefix": "imd",
+    "body": ["import { ${2:zod} } from '${1:zod}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"'use client' directive": {
+		"prefix": "uc",
+		"body": [
+			"'use client';",
+		],
+		"description": "'use client' directive",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+  "api-client.ts": {
+    "key": "importApiClient",
+    "prefix": "imapicli",
+    "body": [
+     " import * as products from './products'",
+"",
+"export const Api = {",
+  "products",
+"}"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+}

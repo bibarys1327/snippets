@@ -1,0 +1,105 @@
+{
+	"Next 14 | Page component": {
+		"prefix": "pc",
+		"scope": "typescriptreact, javascriptreact",
+		"body": [
+			"export default function ${3:${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}Page}(){",
+			"\t${4:}",
+			"\treturn ( ",
+			"\t\t<${2:div}> ",
+			"\t\t\t${3:${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}Page}",
+			"\t\t</${2:div}>",
+			"\t)",
+			"}"
+		],
+		"description": "Next 14 | Page component"
+	},
+	"Next 14 | Layout component": {
+		"prefix": "lc",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Layout component",
+		"body": [
+			"export default function ${2:${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}}Layout({", 
+			"\tchildren,",
+			"}: { ",
+			"\tchildren: React.ReactNode",
+			"}) {",
+			"\treturn ( ",
+			"\t\t<main> ",
+			" \t\t\t${2:${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}}Layout",
+			" \t\t\t{children}",
+			"\t\t</main>",
+			"\t)",
+			"}",
+			""
+		]
+	},
+	"Next 14 | Route handler": {
+		"prefix": "rh",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Route component",
+		"body": [
+			"import { NextResponse, type NextRequest } from 'next/server'",
+			"",
+			"export async function ${1:GET}(req: NextRequest) {",
+			"\treturn ${2:NextResponse.json()}",
+			"}",
+			""
+		]
+	},
+	"ngapit": {
+    "prefix": "trh",
+    "body": [
+      "import { NextResponse, type NextRequest } from 'next/server'",
+      "",
+      "type Data = {",
+      "  name: string;",
+      "};",
+      "",
+      "export async function ${1:GET} (req: NextRequest, res: NextResponse<Data>) => {",
+      "  res.status(200).json({ name: \"John Doe\" });",
+      "};",
+  
+    ],
+    "description": "Typescript: Next.js API Route"
+  },
+	"Next 14 | Params": {
+		"prefix": "pi",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Params ",
+		"body": [
+			"{ params: { ${1:id} } }: { params: { ${1:id}: ${2:string} } }"
+		]
+	},
+	"Next 14 | Metadata": {
+		"prefix": "md",
+		"scope": "typescriptreact, javascriptreact",
+		"description": "Next 14 | Metadata",
+		"body": [
+			"import type { Metadata } from 'next'",
+			"",
+			"export const metadata: Metadata = {",
+			"\ttitle: '${1}',",
+			"\tdescription: '${2}'",
+			"}"
+		]
+	},
+	"Next Image component defination": {
+    "prefix": "nui",
+		"scope": "typescriptreact, javascriptreact",
+    "body": ["<Image src='${1:path}' width={${2:20px}} height={${3:20px}} alt='' />"],
+    "description": "nextjs usage of Image Component"
+  },
+	"Next use link": {
+    "prefix": "nul",
+		"scope": "typescriptreact, javascriptreact",
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
+    "description": "Nextjs use link element"
+  },
+	"clsx or cn": {
+		"scope": "javascript, javascriptreact, typescriptreact, typescript",
+		"prefix": "cn",
+		"body": ["className={cn(className, 'flex flex-1')}"],
+		"description": "create a cn "
+	},
+}

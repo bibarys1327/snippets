@@ -1,0 +1,96 @@
+{	
+	"useCallback Snippet": {
+    "prefix": "useCallbackSnippet",
+    "body": [
+      "const ${1:memoizedCallback} = useCallback(",
+      "  () => {",
+      "    ${2:doSomething}(${3:a}, ${4:b});",
+      "  },",
+      "  [${5:a}, ${6:b}],",
+      ");"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useContext Snippet": {
+    "prefix": "useContextSnippet",
+    "body": ["const ${1:value} = useContext(${2:MyContext})"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useMemo Snippet": {
+    "prefix": "useMemoSnippet",
+    "body": [ "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}]);"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useReducer Snippet": {
+    "prefix": "useReducerSnippet",
+    "body": [
+      "const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer}, ${4:initialArg}, ${5:init});"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useRef Snippet": {
+    "prefix": "useRefSnippet",
+    "body": ["const ${1:ref} = useRef(${2:null})"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useAuth Snippet": {
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+		"prefix": "useAuthSnippet",
+		"body": ["const {${1}} = useAuth()"],
+		"description": "call useAuth hook"
+	},
+	
+	"usePathname Snippet": {
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+		"prefix": "usePathnameSnippet",
+		"body": ["const pathname = usePathname()"],
+		"description": "call usePathname hook"
+	},
+	"useRouter Snippet": {
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+		"prefix": "useRouterSnippet",
+		"body": ["const ${1:router} = useRouter();"],
+		"description": "call useRouter hook"
+	},
+	"useSearhParams Snippet": {
+		"scope": "typescript,typescriptreact,javascript,javascriptreact",
+		"prefix": "useSearchParamsSnippet",
+		"body": ["const searchParams = useSearchParams()"],
+		"description": "call useState hook"
+	},
+	"useEffect Snippet": {
+    "prefix": "useEffectSnippet",
+    "body": [
+      "useEffect(() => {",
+      "  ${1:first}",
+      "",
+      "  return () => {",
+      "    ${2:second}",
+      "  }",
+      "}, [${3:third}])",
+      ""
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"useState Snippet": {
+    "prefix": "useStateSnippet",
+    "body": [
+      "const [${1:first}, set${1/(.*)/${1:/capitalize}/}] = useState(${2|null,0,'',false,[],{}|})"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "useTransition Snippet": {
+    "prefix": "useTransitionSnippet",
+    "body": [
+      "const [${1:isPending}, ${2:startTransition}] = useTransition();"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "useId Snippet": {
+    "prefix": "useIdSnippet",
+    "body": [
+      "const ${1:id} = useId();"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+}

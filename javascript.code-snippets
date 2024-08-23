@@ -1,0 +1,77 @@
+{
+	"consoleLog": {
+    "key": "consoleLog",
+    "prefix": "clg",
+    "body": ["console.log(${1:first})"],
+    "key": "Displays a message in the console",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"forEach": {
+    "key": "forEach",
+    "prefix": "fre",
+    "body": ["${1:first}.forEach(${2:second} => {${3:third}})"],
+    "key": "Creates a forEach statement",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"forIn": {
+    "key": "forIn",
+    "prefix": "fin",
+    "body": ["for(let ${1:first} in ${2:second}) {${3:third}}"],
+    "description": "Iterating over property values of iterable objects",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"forOf": {
+    "key": "forOf",
+    "prefix": "fof",
+    "body": ["for(let ${1:first} of ${2:second}) {${3:third}}"],
+    "key": "Iterating over property names of iterable objects",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"anonymousFunction": {
+    "key": "anonymousFunction",
+    "prefix": "anfn",
+    "body": ["(${1:first}) => { ${2:second} }"],
+    "key": "Creates an anonymous function",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"namedFunction": {
+    "key": "namedFunction",
+    "prefix": "nfn",
+    "body": ["const ${1:first} = (${2:second}) => { ${3:third} }"],
+    "key": "Creates a named function",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"destructingObject": {
+    "key": "destructingObject",
+    "prefix": "dob",
+    "body": ["const {${2:second}} = ${1:first}"],
+    "key": "Creates and assigns a local variable using object destructing",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"destructingArray": {
+    "key": "destructingArray",
+    "prefix": "dar",
+    "body": ["const [${2:second}] = ${1:first}"],
+    "key": "Creates and assigns a local variable using array destructing",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"setInterval": {
+    "key": "setInterval",
+    "prefix": "sti",
+    "body": ["setInterval(() => { ${1:first} }, ${2:second})"],
+    "key": "Executes the given function at specified intervals",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"commentBigBlock": {
+    "key": "commentBigBlock",
+    "prefix": "cmmb",
+    "body": ["/**", " * ${1:first}", " */"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+	"typeofSnippet": {
+    "key": "typeofSnippet",
+    "prefix": "tpf",
+    "body": ["typeof ${1:first}"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}
